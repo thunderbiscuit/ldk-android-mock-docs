@@ -1,0 +1,314 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ChannelMonitor</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script><script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html">ldk-android</a></div>
+      <div></div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageIds="ldk-android::org.ldk.structs/ChannelMonitor///PointingToDeclaration//1946847589">
+          <div class="breadcrumbs"><a href="../../../index.html">ldk-android</a>/<a href="../index.html">org.ldk.structs</a>/<a href="index.html">ChannelMonitor</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Channel</span><wbr></wbr><span><span>Monitor</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">ChannelMonitor</a> : <span data-unresolved-link="org.ldk.structs/CommonBase///PointingToDeclaration/">CommonBase</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">A ChannelMonitor handles chain events (blocks connected and disconnected) and generates on-chain transactions to ensure no loss of funds occurs. You MUST ensure that no ChannelMonitors for a given channel anywhere contain out-of-date information and are actively monitoring the chain. Pending Events or updated HTLCs which have not yet been read out by get_and_clear_pending_monitor_events or get_and_clear_pending_events are serialized to disk and reloaded at deserialize-time. Thus, you must ensure that, when handling events, all events gotten are fully handled before re-serializing the new state. Note that the deserializer is only implemented for (BlockHash, ChannelMonitor), which tells you the last block hash which was block_connect()ed. You MUST rescan any blocks along the \&quot;reorg path\&quot; (ie disconnecting blocks until you find a common ancestor from both the returned block hash and the the current chain and then reconnecting blocks to get to the best chain) upon deserializing the object!</p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-740180846%2FFunctions%2F1946847589" anchor-label="best_block_updated" id="-740180846%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="best_block_updated.html"><span><span>best_block_updated</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-740180846%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="best_block_updated.html"><span class="token function">best_block_updated</span></a><span class="token punctuation">(</span>header<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>broadcaster<span class="token operator">: </span><a href="../-broadcaster-interface/index.html">BroadcasterInterface</a><span class="token punctuation">, </span>fee_estimator<span class="token operator">: </span><a href="../-fee-estimator/index.html">FeeEstimator</a><span class="token punctuation">, </span>logger<span class="token operator">: </span><a href="../-logger/index.html">Logger</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../-two-tuple_-txid-c-vec_-c2-tuple_u32-tx-out-z-z-z/index.html">TwoTuple_TxidCVec_C2Tuple_u32TxOutZZZ</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Updates the monitor with the current best chain tip, returning new outputs to watch.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1706832282%2FFunctions%2F1946847589" anchor-label="block_connected" id="1706832282%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="block_connected.html"><span><span>block_connected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1706832282%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="block_connected.html"><span class="token function">block_connected</span></a><span class="token punctuation">(</span>header<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>txdata<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../-two-tuple_usize-transaction-z/index.html">TwoTuple_usizeTransactionZ</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>broadcaster<span class="token operator">: </span><a href="../-broadcaster-interface/index.html">BroadcasterInterface</a><span class="token punctuation">, </span>fee_estimator<span class="token operator">: </span><a href="../-fee-estimator/index.html">FeeEstimator</a><span class="token punctuation">, </span>logger<span class="token operator">: </span><a href="../-logger/index.html">Logger</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../-two-tuple_-txid-c-vec_-c2-tuple_u32-tx-out-z-z-z/index.html">TwoTuple_TxidCVec_C2Tuple_u32TxOutZZZ</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Processes transactions in a newly connected block, which may result in any of the following: - update the monitor's state against resolved HTLCs - punish the counterparty in the case of seeing a revoked commitment transaction - force close the channel and claim/timeout incoming/outgoing HTLCs if near expiration - detect settled outputs for later spending - schedule and bump any in-flight claims Returns any new outputs to watch from `txdata`; after called, these are also included in [`get_outputs_to_watch`].</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-428495663%2FFunctions%2F1946847589" anchor-label="block_disconnected" id="-428495663%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="block_disconnected.html"><span><span>block_disconnected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-428495663%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="block_disconnected.html"><span class="token function">block_disconnected</span></a><span class="token punctuation">(</span>header<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>broadcaster<span class="token operator">: </span><a href="../-broadcaster-interface/index.html">BroadcasterInterface</a><span class="token punctuation">, </span>fee_estimator<span class="token operator">: </span><a href="../-fee-estimator/index.html">FeeEstimator</a><span class="token punctuation">, </span>logger<span class="token operator">: </span><a href="../-logger/index.html">Logger</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Determines if the disconnected block contained any transactions of interest and updates appropriately.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1089889730%2FFunctions%2F1946847589" anchor-label="clone" id="1089889730%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="clone.html"><span><span>clone</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1089889730%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="clone.html"><span class="token function">clone</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">ChannelMonitor</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Creates a copy of the ChannelMonitor</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1463073725%2FFunctions%2F1946847589" anchor-label="current_best_block" id="-1463073725%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="current_best_block.html"><span><span>current_best_block</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1463073725%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="current_best_block.html"><span class="token function">current_best_block</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-best-block/index.html">BestBlock</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Gets the latest best block which was connected either via the [`chain::Listen`] or [`chain::Confirm`] interfaces.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1405156887%2FFunctions%2F1946847589" anchor-label="get_and_clear_pending_events" id="1405156887%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_and_clear_pending_events.html"><span><span>get_and_clear_pending_events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1405156887%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_and_clear_pending_events.html"><span class="token function">get_and_clear_pending_events</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../-event/index.html">Event</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Gets the list of pending events which were generated by previous actions, clearing the list in the process.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1457554482%2FFunctions%2F1946847589" anchor-label="get_and_clear_pending_monitor_events" id="1457554482%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_and_clear_pending_monitor_events.html"><span><span>get_and_clear_pending_monitor_events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1457554482%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_and_clear_pending_monitor_events.html"><span class="token function">get_and_clear_pending_monitor_events</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../-monitor-event/index.html">MonitorEvent</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Get the list of HTLCs who's status has been updated on chain.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1912078386%2FFunctions%2F1946847589" anchor-label="get_claimable_balances" id="1912078386%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_claimable_balances.html"><span><span>get_claimable_balances</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1912078386%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_claimable_balances.html"><span class="token function">get_claimable_balances</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../-balance/index.html">Balance</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Gets the balances in this channel which are either claimable by us if we were to force-close the channel now or which are claimable on-chain (possibly awaiting confirmation).</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1706554175%2FFunctions%2F1946847589" anchor-label="get_funding_txo" id="1706554175%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_funding_txo.html"><span><span>get_funding_txo</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1706554175%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_funding_txo.html"><span class="token function">get_funding_txo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-two-tuple_-out-point-script-z/index.html">TwoTuple_OutPointScriptZ</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Gets the funding transaction outpoint of the channel this ChannelMonitor is monitoring for.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1049694802%2FFunctions%2F1946847589" anchor-label="get_latest_holder_commitment_txn" id="1049694802%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_latest_holder_commitment_txn.html"><span><span>get_latest_holder_commitment_txn</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1049694802%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_latest_holder_commitment_txn.html"><span class="token function">get_latest_holder_commitment_txn</span></a><span class="token punctuation">(</span>logger<span class="token operator">: </span><a href="../-logger/index.html">Logger</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Used by ChannelManager deserialization to broadcast the latest holder state if its copy of the Channel was out-of-date.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="117562777%2FFunctions%2F1946847589" anchor-label="get_latest_update_id" id="117562777%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_latest_update_id.html"><span><span>get_latest_update_id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="117562777%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_latest_update_id.html"><span class="token function">get_latest_update_id</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Gets the update_id from the latest ChannelMonitorUpdate which was applied to this ChannelMonitor.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="240436218%2FFunctions%2F1946847589" anchor-label="get_outputs_to_watch" id="240436218%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_outputs_to_watch.html"><span><span>get_outputs_to_watch</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="240436218%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_outputs_to_watch.html"><span class="token function">get_outputs_to_watch</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../-two-tuple_-txid-c-vec_-c2-tuple_u32-script-z-z-z/index.html">TwoTuple_TxidCVec_C2Tuple_u32ScriptZZZ</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Gets a list of txids, with their output scripts (in the order they appear in the transaction), which we must learn about spends of via block_connected().</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1925682944%2FFunctions%2F1946847589" anchor-label="get_relevant_txids" id="-1925682944%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_relevant_txids.html"><span><span>get_relevant_txids</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1925682944%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_relevant_txids.html"><span class="token function">get_relevant_txids</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Returns the set of txids that should be monitored for re-organization out of the chain.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1877726209%2FFunctions%2F1946847589" anchor-label="load_outputs_to_watch" id="1877726209%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="load_outputs_to_watch.html"><span><span>load_outputs_to_watch</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1877726209%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="load_outputs_to_watch.html"><span class="token function">load_outputs_to_watch</span></a><span class="token punctuation">(</span>filter<span class="token operator">: </span><a href="../-filter/index.html">Filter</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Loads the funding txo and outputs to watch into the given `chain::Filter` by repeatedly calling `chain::Filter::register_output` and `chain::Filter::register_tx` until all outputs have been registered.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-449375111%2FFunctions%2F1946847589" anchor-label="transaction_unconfirmed" id="-449375111%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="transaction_unconfirmed.html"><span><span>transaction_unconfirmed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-449375111%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="transaction_unconfirmed.html"><span class="token function">transaction_unconfirmed</span></a><span class="token punctuation">(</span>txid<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>broadcaster<span class="token operator">: </span><a href="../-broadcaster-interface/index.html">BroadcasterInterface</a><span class="token punctuation">, </span>fee_estimator<span class="token operator">: </span><a href="../-fee-estimator/index.html">FeeEstimator</a><span class="token punctuation">, </span>logger<span class="token operator">: </span><a href="../-logger/index.html">Logger</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Processes a transaction that was reorganized out of the chain.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1593902456%2FFunctions%2F1946847589" anchor-label="transactions_confirmed" id="1593902456%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="transactions_confirmed.html"><span><span>transactions_confirmed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1593902456%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="transactions_confirmed.html"><span class="token function">transactions_confirmed</span></a><span class="token punctuation">(</span>header<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>txdata<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../-two-tuple_usize-transaction-z/index.html">TwoTuple_usizeTransactionZ</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>broadcaster<span class="token operator">: </span><a href="../-broadcaster-interface/index.html">BroadcasterInterface</a><span class="token punctuation">, </span>fee_estimator<span class="token operator">: </span><a href="../-fee-estimator/index.html">FeeEstimator</a><span class="token punctuation">, </span>logger<span class="token operator">: </span><a href="../-logger/index.html">Logger</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../-two-tuple_-txid-c-vec_-c2-tuple_u32-tx-out-z-z-z/index.html">TwoTuple_TxidCVec_C2Tuple_u32TxOutZZZ</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Processes transactions confirmed in a block with the given header and height, returning new outputs to watch.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1363328743%2FFunctions%2F1946847589" anchor-label="update_monitor" id="1363328743%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="update_monitor.html"><span><span>update_monitor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1363328743%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="update_monitor.html"><span class="token function">update_monitor</span></a><span class="token punctuation">(</span>updates<span class="token operator">: </span><a href="../-channel-monitor-update/index.html">ChannelMonitorUpdate</a><span class="token punctuation">, </span>broadcaster<span class="token operator">: </span><a href="../-broadcaster-interface/index.html">BroadcasterInterface</a><span class="token punctuation">, </span>fee_estimator<span class="token operator">: </span><a href="../-fee-estimator/index.html">FeeEstimator</a><span class="token punctuation">, </span>logger<span class="token operator">: </span><a href="../-logger/index.html">Logger</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-result_-none-none-z/index.html">Result_NoneNoneZ</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Updates a ChannelMonitor on the basis of some new information provided by the Channel itself.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-111976064%2FFunctions%2F1946847589" anchor-label="write" id="-111976064%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="write.html"><span><span>write</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-111976064%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="write.html"><span class="token function">write</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Serialize the ChannelMonitor object into a byte array which can be read by ChannelMonitor_read</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

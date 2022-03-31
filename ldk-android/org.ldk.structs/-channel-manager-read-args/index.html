@@ -1,0 +1,239 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ChannelManagerReadArgs</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script><script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html">ldk-android</a></div>
+      <div></div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageIds="ldk-android::org.ldk.structs/ChannelManagerReadArgs///PointingToDeclaration//1946847589">
+          <div class="breadcrumbs"><a href="../../../index.html">ldk-android</a>/<a href="../index.html">org.ldk.structs</a>/<a href="index.html">ChannelManagerReadArgs</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Channel</span><wbr></wbr><span>Manager</span><wbr></wbr><span>Read</span><wbr></wbr><span><span>Args</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">ChannelManagerReadArgs</a> : <span data-unresolved-link="org.ldk.structs/CommonBase///PointingToDeclaration/">CommonBase</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Arguments for the creation of a ChannelManager that are not deserialized. At a high-level, the process for deserializing a ChannelManager and resuming normal operation is: 1) Deserialize all stored [`ChannelMonitor`]s. 2) Deserialize the [`ChannelManager`] by filling in this struct and calling: `<(BlockHash, ChannelManager)>::read(reader, args)` This may result in closing some channels if the [`ChannelMonitor`] is newer than the stored [`ChannelManager`] state to ensure no loss of funds. Thus, transactions may be broadcasted. 3) If you are not fetching full blocks, register all relevant [`ChannelMonitor`] outpoints the same way you would handle a [`chain::Filter`] call using [`ChannelMonitor::get_outputs_to_watch`] and [`ChannelMonitor::get_funding_txo`]. 4) Reconnect blocks on your [`ChannelMonitor`]s. 5) Disconnect/connect blocks on the [`ChannelManager`]. 6) Re-persist the [`ChannelMonitor`]s to ensure the latest state is on disk. Note that if you're using a [`ChainMonitor`] for your [`chain::Watch`] implementation, you will likely accomplish this as a side-effect of calling [`chain::Watch::watch_channel`] in the next step. 7) Move the [`ChannelMonitor`]s into your local [`chain::Watch`]. If you're using a [`ChainMonitor`], this is done by calling [`chain::Watch::watch_channel`]. Note that the ordering of #4-7 is not of importance, however all four must occur before you call any other methods on the newly-deserialized [`ChannelManager`]. Note that because some channels may be closed during deserialization, it is critical that you always deserialize only the latest version of a ChannelManager and ChannelMonitors available to you. If you deserialize an old ChannelManager (during which force-closure transactions may be broadcast), and then later deserialize a newer version of the same ChannelManager (which will not force-close the same channels but consider them live), you may end up revoking a state for which you've already broadcasted the transaction. [`ChainMonitor`]: crate::chain::chainmonitor::ChainMonitor</p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="895925862%2FFunctions%2F1946847589" anchor-label="get_chain_monitor" id="895925862%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_chain_monitor.html"><span><span>get_chain_monitor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="895925862%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_chain_monitor.html"><span class="token function">get_chain_monitor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-watch/index.html">Watch</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">The chain::Watch for use in the ChannelManager in the future.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1487380392%2FFunctions%2F1946847589" anchor-label="get_default_config" id="-1487380392%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_default_config.html"><span><span>get_default_config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1487380392%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_default_config.html"><span class="token function">get_default_config</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-user-config/index.html">UserConfig</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Default settings used for new channels.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1973778789%2FFunctions%2F1946847589" anchor-label="get_fee_estimator" id="-1973778789%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_fee_estimator.html"><span><span>get_fee_estimator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1973778789%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_fee_estimator.html"><span class="token function">get_fee_estimator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-fee-estimator/index.html">FeeEstimator</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">The fee_estimator for use in the ChannelManager in the future.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1193876470%2FFunctions%2F1946847589" anchor-label="get_keys_manager" id="1193876470%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_keys_manager.html"><span><span>get_keys_manager</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1193876470%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_keys_manager.html"><span class="token function">get_keys_manager</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-keys-interface/index.html">KeysInterface</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">The keys provider which will give us relevant keys.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="808978120%2FFunctions%2F1946847589" anchor-label="get_logger" id="808978120%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_logger.html"><span><span>get_logger</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="808978120%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_logger.html"><span class="token function">get_logger</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-logger/index.html">Logger</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">The Logger for use in the ChannelManager and which may be used to log information during deserialization.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1335101125%2FFunctions%2F1946847589" anchor-label="get_tx_broadcaster" id="1335101125%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_tx_broadcaster.html"><span><span>get_tx_broadcaster</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1335101125%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_tx_broadcaster.html"><span class="token function">get_tx_broadcaster</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-broadcaster-interface/index.html">BroadcasterInterface</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">The BroadcasterInterface which will be used in the ChannelManager in the future and may be used to broadcast the latest local commitment transactions of channels which must be force-closed during deserialization.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="290782848%2FFunctions%2F1946847589" anchor-label="of" id="290782848%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="of.html"><span><span>of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="290782848%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="of.html"><span class="token function">of</span></a><span class="token punctuation">(</span>keys_manager<span class="token operator">: </span><a href="../-keys-interface/index.html">KeysInterface</a><span class="token punctuation">, </span>fee_estimator<span class="token operator">: </span><a href="../-fee-estimator/index.html">FeeEstimator</a><span class="token punctuation">, </span>chain_monitor<span class="token operator">: </span><a href="../-watch/index.html">Watch</a><span class="token punctuation">, </span>tx_broadcaster<span class="token operator">: </span><a href="../-broadcaster-interface/index.html">BroadcasterInterface</a><span class="token punctuation">, </span>logger<span class="token operator">: </span><a href="../-logger/index.html">Logger</a><span class="token punctuation">, </span>default_config<span class="token operator">: </span><a href="../-user-config/index.html">UserConfig</a><span class="token punctuation">, </span>channel_monitors<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../-channel-monitor/index.html">ChannelMonitor</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">ChannelManagerReadArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Simple utility function to create a ChannelManagerReadArgs which creates the monitor HashMap for you.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1723577874%2FFunctions%2F1946847589" anchor-label="set_chain_monitor" id="-1723577874%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="set_chain_monitor.html"><span><span>set_chain_monitor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1723577874%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="set_chain_monitor.html"><span class="token function">set_chain_monitor</span></a><span class="token punctuation">(</span>val<span class="token operator">: </span><a href="../-watch/index.html">Watch</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">The chain::Watch for use in the ChannelManager in the future.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2110502014%2FFunctions%2F1946847589" anchor-label="set_default_config" id="-2110502014%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="set_default_config.html"><span><span>set_default_config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2110502014%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="set_default_config.html"><span class="token function">set_default_config</span></a><span class="token punctuation">(</span>val<span class="token operator">: </span><a href="../-user-config/index.html">UserConfig</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Default settings used for new channels.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="98594784%2FFunctions%2F1946847589" anchor-label="set_fee_estimator" id="98594784%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="set_fee_estimator.html"><span><span>set_fee_estimator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="98594784%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="set_fee_estimator.html"><span class="token function">set_fee_estimator</span></a><span class="token punctuation">(</span>val<span class="token operator">: </span><a href="../-fee-estimator/index.html">FeeEstimator</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">The fee_estimator for use in the ChannelManager in the future.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1906029264%2FFunctions%2F1946847589" anchor-label="set_keys_manager" id="-1906029264%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="set_keys_manager.html"><span><span>set_keys_manager</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1906029264%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="set_keys_manager.html"><span class="token function">set_keys_manager</span></a><span class="token punctuation">(</span>val<span class="token operator">: </span><a href="../-keys-interface/index.html">KeysInterface</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">The keys provider which will give us relevant keys.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1067461905%2FFunctions%2F1946847589" anchor-label="set_logger" id="-1067461905%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="set_logger.html"><span><span>set_logger</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1067461905%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="set_logger.html"><span class="token function">set_logger</span></a><span class="token punctuation">(</span>val<span class="token operator">: </span><a href="../-logger/index.html">Logger</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">The Logger for use in the ChannelManager and which may be used to log information during deserialization.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1155089265%2FFunctions%2F1946847589" anchor-label="set_tx_broadcaster" id="1155089265%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="set_tx_broadcaster.html"><span><span>set_tx_broadcaster</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1155089265%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="set_tx_broadcaster.html"><span class="token function">set_tx_broadcaster</span></a><span class="token punctuation">(</span>val<span class="token operator">: </span><a href="../-broadcaster-interface/index.html">BroadcasterInterface</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">The BroadcasterInterface which will be used in the ChannelManager in the future and may be used to broadcast the latest local commitment transactions of channels which must be force-closed during deserialization.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

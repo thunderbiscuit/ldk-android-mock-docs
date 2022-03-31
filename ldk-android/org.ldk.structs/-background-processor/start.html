@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>start</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script><script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html">ldk-android</a></div>
+      <div></div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageIds="ldk-android::org.ldk.structs/BackgroundProcessor/start/#org.ldk.structs.ChannelManagerPersister#org.ldk.structs.EventHandler#org.ldk.structs.ChainMonitor#org.ldk.structs.ChannelManager#org.ldk.structs.NetGraphMsgHandler#org.ldk.structs.PeerManager#org.ldk.structs.Logger/PointingToDeclaration//1946847589">
+          <div class="breadcrumbs"><a href="../../../index.html">ldk-android</a>/<a href="../index.html">org.ldk.structs</a>/<a href="index.html">BackgroundProcessor</a>/<a href="start.html">start</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span><span>start</span></span></h1>
+          </div>
+          <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span>persister<span class="token operator">: </span><a href="../-channel-manager-persister/index.html">ChannelManagerPersister</a><span class="token punctuation">, </span>event_handler<span class="token operator">: </span><a href="../-event-handler/index.html">EventHandler</a><span class="token punctuation">, </span>chain_monitor<span class="token operator">: </span><a href="../-chain-monitor/index.html">ChainMonitor</a><span class="token punctuation">, </span>channel_manager<span class="token operator">: </span><a href="../-channel-manager/index.html">ChannelManager</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html"><span class="token annotation">Nullable</span></a> </span>net_graph_msg_handler<span class="token operator">: </span><a href="../-net-graph-msg-handler/index.html">NetGraphMsgHandler</a><span class="token punctuation">, </span>peer_manager<span class="token operator">: </span><a href="../-peer-manager/index.html">PeerManager</a><span class="token punctuation">, </span>logger<span class="token operator">: </span><a href="../-logger/index.html">Logger</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">BackgroundProcessor</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Start a background thread that takes care of responsibilities enumerated in the [top-level documentation]. The thread runs indefinitely unless the object is dropped, [`stop`] is called, or `persist_manager` returns an error. In case of an error, the error is retrieved by calling either [`join`] or [`stop`]. # Data Persistence `persist_manager` is responsible for writing out the [`ChannelManager`] to disk, and/or uploading to one or more backup services. See [`ChannelManager::write`] for writing out a [`ChannelManager`]. See [`FilesystemPersister::persist_manager`] for Rust-Lightning's provided implementation. Typically, users should either implement [`ChannelManagerPersister`] to never return an error or call [`join`] and handle any error that may arise. For the latter case, `BackgroundProcessor` must be restarted by calling `start` again after handling the error. # Event Handling `event_handler` is responsible for handling events that users should be notified of (e.g., payment failed). [`BackgroundProcessor`] may decorate the given [`EventHandler`] with common functionality implemented by other handlers. [`NetGraphMsgHandler`] if given will update the [`NetworkGraph`] based on payment failures. [top-level documentation]: BackgroundProcessor [`join`]: Self::join [`stop`]: Self::stop [`ChannelManager`]: lightning::ln::channelmanager::ChannelManager [`ChannelManager::write`]: lightning::ln::channelmanager::ChannelManager#impl-Writeable [`FilesystemPersister::persist_manager`]: lightning_persister::FilesystemPersister::persist_manager [`NetworkGraph`]: lightning::routing::network_graph::NetworkGraph Note that net_graph_msg_handler (or a relevant inner pointer) may be NULL or all-0s to represent None</p></div></div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

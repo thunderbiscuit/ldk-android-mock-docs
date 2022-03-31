@@ -1,0 +1,230 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ChannelManagerConstructor</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script><script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html">ldk-android</a></div>
+      <div></div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageIds="ldk-android::org.ldk.batteries/ChannelManagerConstructor///PointingToDeclaration//1946847589">
+          <div class="breadcrumbs"><a href="../../../index.html">ldk-android</a>/<a href="../index.html">org.ldk.batteries</a>/<a href="index.html">ChannelManagerConstructor</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Channel</span><wbr></wbr><span>Manager</span><wbr></wbr><span><span>Constructor</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">ChannelManagerConstructor</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">A simple utility class which assists in constructing a fresh or deserializing from disk a ChannelManager and one or more ChannelMonitors. Also constructs a PeerManager and spawns a background thread to monitor for and notify you of relevant Events.</p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+            <div class="tabs-section-body">
+              <h2 class="tabbedcontent">Constructors</h2>
+              <div class="table" data-togglable="Constructors"><a data-name="1467635836%2FConstructors%2F1946847589" anchor-label="ChannelManagerConstructor" id="1467635836%2FConstructors%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-channel-manager-constructor.html"><span>Channel</span><wbr></wbr><span>Manager</span><wbr></wbr><span><span>Constructor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1467635836%2FConstructors%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="-channel-manager-constructor.html"><span class="token function">ChannelManagerConstructor</span></a><span class="token punctuation">(</span>channel_manager_serialized<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>channel_monitors_serialized<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span>config<span class="token operator">: </span><a href="../../org.ldk.structs/-user-config/index.html">UserConfig</a><span class="token punctuation">, </span>keys_interface<span class="token operator">: </span><a href="../../org.ldk.structs/-keys-interface/index.html">KeysInterface</a><span class="token punctuation">, </span>fee_estimator<span class="token operator">: </span><a href="../../org.ldk.structs/-fee-estimator/index.html">FeeEstimator</a><span class="token punctuation">, </span>chain_monitor<span class="token operator">: </span><a href="../../org.ldk.structs/-chain-monitor/index.html">ChainMonitor</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html"><span class="token annotation">Nullable</span></a> </span>filter<span class="token operator">: </span><a href="../../org.ldk.structs/-filter/index.html">Filter</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html"><span class="token annotation">Nullable</span></a> </span>net_graph<span class="token operator">: </span><a href="../../org.ldk.structs/-network-graph/index.html">NetworkGraph</a><span class="token punctuation">, </span>tx_broadcaster<span class="token operator">: </span><a href="../../org.ldk.structs/-broadcaster-interface/index.html">BroadcasterInterface</a><span class="token punctuation">, </span>logger<span class="token operator">: </span><a href="../../org.ldk.structs/-logger/index.html">Logger</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Deserializes a channel manager and a set of channel monitors from the given serialized copies and interface implementations</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="768267045%2FConstructors%2F1946847589" anchor-label="ChannelManagerConstructor" id="768267045%2FConstructors%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-channel-manager-constructor.html"><span>Channel</span><wbr></wbr><span>Manager</span><wbr></wbr><span><span>Constructor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="768267045%2FConstructors%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="-channel-manager-constructor.html"><span class="token function">ChannelManagerConstructor</span></a><span class="token punctuation">(</span>network<span class="token operator">: </span><a href="../../org.ldk.enums/-network/index.html">Network</a><span class="token punctuation">, </span>config<span class="token operator">: </span><a href="../../org.ldk.structs/-user-config/index.html">UserConfig</a><span class="token punctuation">, </span>current_blockchain_tip_hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>current_blockchain_tip_height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>keys_interface<span class="token operator">: </span><a href="../../org.ldk.structs/-keys-interface/index.html">KeysInterface</a><span class="token punctuation">, </span>fee_estimator<span class="token operator">: </span><a href="../../org.ldk.structs/-fee-estimator/index.html">FeeEstimator</a><span class="token punctuation">, </span>chain_monitor<span class="token operator">: </span><a href="../../org.ldk.structs/-chain-monitor/index.html">ChainMonitor</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html"><span class="token annotation">Nullable</span></a> </span>net_graph<span class="token operator">: </span><a href="../../org.ldk.structs/-network-graph/index.html">NetworkGraph</a><span class="token punctuation">, </span>tx_broadcaster<span class="token operator">: </span><a href="../../org.ldk.structs/-broadcaster-interface/index.html">BroadcasterInterface</a><span class="token punctuation">, </span>logger<span class="token operator">: </span><a href="../../org.ldk.structs/-logger/index.html">Logger</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Constructs a channel manager from the given interface implementations</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Types</h2>
+              <div class="table" data-togglable="Types"><a data-name="-1188038%2FClasslikes%2F1946847589" anchor-label="EventHandler" id="-1188038%2FClasslikes%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-event-handler/index.html"><span>Event</span><wbr></wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1188038%2FClasslikes%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-event-handler/index.html">EventHandler</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Abstract interface which should handle Events and persist the ChannelManager.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1865089312%2FClasslikes%2F1946847589" anchor-label="InvalidSerializedDataException" id="-1865089312%2FClasslikes%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-invalid-serialized-data-exception/index.html"><span>Invalid</span><wbr></wbr><span>Serialized</span><wbr></wbr><span>Data</span><wbr></wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1865089312%2FClasslikes%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-invalid-serialized-data-exception/index.html">InvalidSerializedDataException</a> : <a href="https://developer.android.com/reference/kotlin/java/lang/Exception.html">Exception</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">An Exception that indicates the serialized data is invalid and has been corrupted on disk.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-1896744347%2FFunctions%2F1946847589" anchor-label="chain_sync_completed" id="-1896744347%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="chain_sync_completed.html"><span><span>chain_sync_completed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1896744347%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="chain_sync_completed.html"><span class="token function">chain_sync_completed</span></a><span class="token punctuation">(</span>event_handler<span class="token operator">: </span><a href="-event-handler/index.html">ChannelManagerConstructor.EventHandler</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html"><span class="token annotation">Nullable</span></a> </span>scorer<span class="token operator">: </span><a href="../../org.ldk.structs/-multi-threaded-lockable-score/index.html">MultiThreadedLockableScore</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Utility which adds all of the deserialized ChannelMonitors to the chain watch so that further updates from the ChannelManager are processed as normal.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1736705374%2FFunctions%2F1946847589" anchor-label="interrupt" id="-1736705374%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="interrupt.html"><span><span>interrupt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1736705374%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="interrupt.html"><span class="token function">interrupt</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Interrupt the background thread, stopping the background handling of events.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="1529341524%2FProperties%2F1946847589" anchor-label="channel_manager" id="1529341524%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="channel_manager.html">channel_manager</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1529341524%2FProperties%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><a data-name="1529341524%2FProperties%2F1946847589" anchor-label="channel_manager" id="1529341524%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="channel_manager.html">channel_manager</a><span class="token operator">: </span><a href="../../org.ldk.structs/-channel-manager/index.html">ChannelManager</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1529341524%2FProperties%2F1946847589" anchor-label="channel_manager" id="1529341524%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>The ChannelManager either deserialized or newly-constructed.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-781822469%2FProperties%2F1946847589" anchor-label="channel_manager_latest_block_hash" id="-781822469%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="channel_manager_latest_block_hash.html">channel_manager_latest_block_hash</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-781822469%2FProperties%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><a data-name="-781822469%2FProperties%2F1946847589" anchor-label="channel_manager_latest_block_hash" id="-781822469%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="channel_manager_latest_block_hash.html">channel_manager_latest_block_hash</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-781822469%2FProperties%2F1946847589" anchor-label="channel_manager_latest_block_hash" id="-781822469%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>The latest block has the channel manager saw.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1618070112%2FProperties%2F1946847589" anchor-label="channel_monitors" id="1618070112%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="channel_monitors.html">channel_monitors</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1618070112%2FProperties%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><a data-name="1618070112%2FProperties%2F1946847589" anchor-label="channel_monitors" id="1618070112%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="channel_monitors.html">channel_monitors</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../../org.ldk.structs/-two-tuple_-block-hash-channel-monitor-z/index.html">TwoTuple_BlockHashChannelMonitorZ</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1618070112%2FProperties%2F1946847589" anchor-label="channel_monitors" id="1618070112%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>A list of ChannelMonitors and the last block they each saw.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-210993123%2FProperties%2F1946847589" anchor-label="nio_peer_handler" id="-210993123%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="nio_peer_handler.html">nio_peer_handler</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-210993123%2FProperties%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><a data-name="-210993123%2FProperties%2F1946847589" anchor-label="nio_peer_handler" id="-210993123%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="nio_peer_handler.html">nio_peer_handler</a><span class="token operator">: </span><a href="../-nio-peer-handler/index.html">NioPeerHandler</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-210993123%2FProperties%2F1946847589" anchor-label="nio_peer_handler" id="-210993123%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>A NioPeerHandler which manages a background thread to handle socket events and pass them to the peer_manager.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1834499568%2FProperties%2F1946847589" anchor-label="payer" id="1834499568%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="payer.html">payer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1834499568%2FProperties%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><a data-name="1834499568%2FProperties%2F1946847589" anchor-label="payer" id="1834499568%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html"><span class="token annotation">Nullable</span></a></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="payer.html">payer</a><span class="token operator">: </span><a href="../../org.ldk.structs/-invoice-payer/index.html">InvoicePayer</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1834499568%2FProperties%2F1946847589" anchor-label="payer" id="1834499568%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>If a `NetworkGraph` is provided to the constructor *and* a `LockableScore` is provided to `chain_sync_completed`, this will be non-null after `chain_sync_completed` returns.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1189912325%2FProperties%2F1946847589" anchor-label="peer_manager" id="1189912325%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="peer_manager.html">peer_manager</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1189912325%2FProperties%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><a data-name="1189912325%2FProperties%2F1946847589" anchor-label="peer_manager" id="1189912325%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="peer_manager.html">peer_manager</a><span class="token operator">: </span><a href="../../org.ldk.structs/-peer-manager/index.html">PeerManager</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1189912325%2FProperties%2F1946847589" anchor-label="peer_manager" id="1189912325%2FProperties%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>A PeerManager which is constructed to pass messages and handle connections to peers.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

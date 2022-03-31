@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>LDKChannelMonitorUpdateErr_TemporaryFailure</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><link href="../../../../styles/prism.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../../scripts/main.js" defer="defer"></script><script type="text/javascript" src="../../../../scripts/prism.js" async="async"></script>  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../../index.html">ldk-android</a></div>
+      <div></div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageIds="ldk-android::org.ldk.enums/ChannelMonitorUpdateErr.LDKChannelMonitorUpdateErr_TemporaryFailure///PointingToDeclaration//1946847589">
+          <div class="breadcrumbs"><a href="../../../../index.html">ldk-android</a>/<a href="../../index.html">org.ldk.enums</a>/<a href="../index.html">ChannelMonitorUpdateErr</a>/<a href="index.html">LDKChannelMonitorUpdateErr_TemporaryFailure</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>LDKChannel</span><wbr></wbr><span>Monitor</span><wbr></wbr><span>Update</span><wbr></wbr><span>Err_Temporary</span><wbr></wbr><span><span>Failure</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><div class="block"><a href="index.html">LDKChannelMonitorUpdateErr_TemporaryFailure</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Used to indicate a temporary failure (eg connection to a watchtower or remote backup of our state failed, but is expected to succeed at some point in the future). Such a failure will \&quot;freeze\&quot; a channel, preventing us from revoking old states or submitting new commitment transactions to the counterparty. Once the update(s) that failed have been successfully applied, a [`MonitorEvent::UpdateCompleted`] event should be returned via [`Watch::release_pending_monitor_events`] which will then restore the channel to an operational state. Note that a given ChannelManager will *never* re-generate a given ChannelMonitorUpdate. If you return a TemporaryFailure you must ensure that it is written to disk safely before writing out the latest ChannelManager state. Even when a channel has been \&quot;frozen\&quot; updates to the ChannelMonitor can continue to occur (eg if an inbound HTLC which we forwarded was claimed upstream resulting in us attempting to claim it on this channel) and those updates must be applied wherever they can be. At least one such updated ChannelMonitor must be persisted otherwise PermanentFailure should be returned to get things on-chain ASAP using only the in-memory copy. Obviously updates to the channel which would invalidate previous ChannelMonitors are not made when a channel has been \&quot;frozen\&quot;. Note that even if updates made after TemporaryFailure succeed you must still provide a [`MonitorEvent::UpdateCompleted`] to ensure you have the latest monitor and re-enable normal channel operation. Note that this is normally generated through a call to [`ChainMonitor::channel_monitor_updated`]. Note that the update being processed here will not be replayed for you when you return a [`MonitorEvent::UpdateCompleted`] event via [`Watch::release_pending_monitor_events`], so you must store the update itself on your own local disk prior to returning a TemporaryFailure. You may, of course, employ a journaling approach, storing only the ChannelMonitorUpdate on disk without updating the monitor itself, replaying the journal at reload-time. For deployments where a copy of ChannelMonitors and other local state are backed up in a remote location (with local copies persisted immediately), it is anticipated that all updates will return TemporaryFailure until the remote copies could be updated. [`ChainMonitor::channel_monitor_updated`]: chainmonitor::ChainMonitor::channel_monitor_updated</p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"></div>
+            <div class="tabs-section-body"></div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>update_persisted_channel</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script><script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html">ldk-android</a></div>
+      <div></div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageIds="ldk-android::org.ldk.structs/Persist/update_persisted_channel/#org.ldk.structs.OutPoint#org.ldk.structs.ChannelMonitorUpdate#org.ldk.structs.ChannelMonitor#org.ldk.structs.MonitorUpdateId/PointingToDeclaration//1946847589">
+          <div class="breadcrumbs"><a href="../../../index.html">ldk-android</a>/<a href="../index.html">org.ldk.structs</a>/<a href="index.html">Persist</a>/<a href="update_persisted_channel.html">update_persisted_channel</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span><span>update_persisted_channel</span></span></h1>
+          </div>
+          <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="update_persisted_channel.html"><span class="token function">update_persisted_channel</span></a><span class="token punctuation">(</span>channel_id<span class="token operator">: </span><a href="../-out-point/index.html">OutPoint</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html"><span class="token annotation">Nullable</span></a> </span>update<span class="token operator">: </span><a href="../-channel-monitor-update/index.html">ChannelMonitorUpdate</a><span class="token punctuation">, </span>data<span class="token operator">: </span><a href="../-channel-monitor/index.html">ChannelMonitor</a><span class="token punctuation">, </span>update_id<span class="token operator">: </span><a href="../-monitor-update-id/index.html">MonitorUpdateId</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-result_-none-channel-monitor-update-err-z/index.html">Result_NoneChannelMonitorUpdateErrZ</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Update one channel's data. The provided [`ChannelMonitor`] has already applied the given update. Note that on every update, you **must** persist either the [`ChannelMonitorUpdate`] or the updated monitor itself to disk/backups. See the [`Persist`] trait documentation for more details. During blockchain synchronization operations, this may be called with no [`ChannelMonitorUpdate`], in which case the full [`ChannelMonitor`] needs to be persisted. Note that after the full [`ChannelMonitor`] is persisted any previous [`ChannelMonitorUpdate`]s which were persisted should be discarded - they can no longer be applied to the persisted [`ChannelMonitor`] as they were already applied. If an implementer chooses to persist the updates only, they need to make sure that all the updates are applied to the `ChannelMonitors` *before the set of channel monitors is given to the `ChannelManager` deserialization routine. See [`ChannelMonitor::update_monitor`] for applying a monitor update to a monitor. If full `ChannelMonitors` are persisted, then there is no need to persist individual updates. Note that there could be a performance tradeoff between persisting complete channel monitors on every update vs. persisting only updates and applying them in batches. The size of each monitor grows `O(number of state updates)` whereas updates are small and `O(1)`. The `update_id` is used to identify this call to [`ChainMonitor::channel_monitor_updated`], if you return [`ChannelMonitorUpdateErr::TemporaryFailure`]. See [`Writeable::write`] on [`ChannelMonitor`] for writing out a `ChannelMonitor`, [`Writeable::write`] on [`ChannelMonitorUpdate`] for writing out an update, and [`ChannelMonitorUpdateErr`] for requirements when returning errors. [`Writeable::write`]: crate::util::ser::Writeable::write Note that update (or a relevant inner pointer) may be NULL or all-0s to represent None</p></div></div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

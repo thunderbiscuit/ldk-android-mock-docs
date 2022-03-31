@@ -1,0 +1,194 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>RoutingMessageHandlerInterface</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><link href="../../../../styles/prism.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../../scripts/main.js" defer="defer"></script><script type="text/javascript" src="../../../../scripts/prism.js" async="async"></script>  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../../index.html">ldk-android</a></div>
+      <div></div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageIds="ldk-android::org.ldk.structs/RoutingMessageHandler.RoutingMessageHandlerInterface///PointingToDeclaration//1946847589">
+          <div class="breadcrumbs"><a href="../../../../index.html">ldk-android</a>/<a href="../../index.html">org.ldk.structs</a>/<a href="../index.html">RoutingMessageHandler</a>/<a href="index.html">RoutingMessageHandlerInterface</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Routing</span><wbr></wbr><span>Message</span><wbr></wbr><span>Handler</span><wbr></wbr><span><span>Interface</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">RoutingMessageHandlerInterface</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-346223641%2FFunctions%2F1946847589" anchor-label="get_next_channel_announcements" id="-346223641%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_next_channel_announcements.html"><span><span>get_next_channel_announcements</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-346223641%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_next_channel_announcements.html"><span class="token function">get_next_channel_announcements</span></a><span class="token punctuation">(</span>starting_point<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span>batch_amount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../../-three-tuple_-channel-announcement-channel-update-channel-update-z/index.html">ThreeTuple_ChannelAnnouncementChannelUpdateChannelUpdateZ</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Gets a subset of the channel announcements and updates required to dump our routing table to a remote node, starting at the short_channel_id indicated by starting_point and including the batch_amount entries immediately higher in numerical value than starting_point.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="932283762%2FFunctions%2F1946847589" anchor-label="get_next_node_announcements" id="932283762%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get_next_node_announcements.html"><span><span>get_next_node_announcements</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="932283762%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get_next_node_announcements.html"><span class="token function">get_next_node_announcements</span></a><span class="token punctuation">(</span>starting_point<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>batch_amount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../../-node-announcement/index.html">NodeAnnouncement</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Gets a subset of the node announcements required to dump our routing table to a remote node, starting at the node *after* the provided publickey and including batch_amount entries immediately higher (as defined by ::cmp) than starting_point.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1179133734%2FFunctions%2F1946847589" anchor-label="handle_channel_announcement" id="1179133734%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="handle_channel_announcement.html"><span><span>handle_channel_announcement</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1179133734%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="handle_channel_announcement.html"><span class="token function">handle_channel_announcement</span></a><span class="token punctuation">(</span>msg<span class="token operator">: </span><a href="../../-channel-announcement/index.html">ChannelAnnouncement</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../-result_bool-lightning-error-z/index.html">Result_boolLightningErrorZ</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Handle a channel_announcement message, returning true if it should be forwarded on, false or returning an Err otherwise.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1303913562%2FFunctions%2F1946847589" anchor-label="handle_channel_update" id="-1303913562%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="handle_channel_update.html"><span><span>handle_channel_update</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1303913562%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="handle_channel_update.html"><span class="token function">handle_channel_update</span></a><span class="token punctuation">(</span>msg<span class="token operator">: </span><a href="../../-channel-update/index.html">ChannelUpdate</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../-result_bool-lightning-error-z/index.html">Result_boolLightningErrorZ</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Handle an incoming channel_update message, returning true if it should be forwarded on, false or returning an Err otherwise.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1570103470%2FFunctions%2F1946847589" anchor-label="handle_node_announcement" id="1570103470%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="handle_node_announcement.html"><span><span>handle_node_announcement</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1570103470%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="handle_node_announcement.html"><span class="token function">handle_node_announcement</span></a><span class="token punctuation">(</span>msg<span class="token operator">: </span><a href="../../-node-announcement/index.html">NodeAnnouncement</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../-result_bool-lightning-error-z/index.html">Result_boolLightningErrorZ</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Handle an incoming node_announcement message, returning true if it should be forwarded on, false or returning an Err otherwise.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="166267570%2FFunctions%2F1946847589" anchor-label="handle_query_channel_range" id="166267570%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="handle_query_channel_range.html"><span><span>handle_query_channel_range</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="166267570%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="handle_query_channel_range.html"><span class="token function">handle_query_channel_range</span></a><span class="token punctuation">(</span>their_node_id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>msg<span class="token operator">: </span><a href="../../-query-channel-range/index.html">QueryChannelRange</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../-result_-none-lightning-error-z/index.html">Result_NoneLightningErrorZ</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Handles when a peer asks us to send a list of short_channel_ids for the requested range of blocks.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1519756573%2FFunctions%2F1946847589" anchor-label="handle_query_short_channel_ids" id="1519756573%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="handle_query_short_channel_ids.html"><span><span>handle_query_short_channel_ids</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1519756573%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="handle_query_short_channel_ids.html"><span class="token function">handle_query_short_channel_ids</span></a><span class="token punctuation">(</span>their_node_id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>msg<span class="token operator">: </span><a href="../../-query-short-channel-ids/index.html">QueryShortChannelIds</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../-result_-none-lightning-error-z/index.html">Result_NoneLightningErrorZ</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Handles when a peer asks us to send routing gossip messages for a list of short_channel_ids.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="413047534%2FFunctions%2F1946847589" anchor-label="handle_reply_channel_range" id="413047534%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="handle_reply_channel_range.html"><span><span>handle_reply_channel_range</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="413047534%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="handle_reply_channel_range.html"><span class="token function">handle_reply_channel_range</span></a><span class="token punctuation">(</span>their_node_id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>msg<span class="token operator">: </span><a href="../../-reply-channel-range/index.html">ReplyChannelRange</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../-result_-none-lightning-error-z/index.html">Result_NoneLightningErrorZ</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Handles the reply of a query we initiated to learn about channels for a given range of blocks.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1838935670%2FFunctions%2F1946847589" anchor-label="handle_reply_short_channel_ids_end" id="-1838935670%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="handle_reply_short_channel_ids_end.html"><span><span>handle_reply_short_channel_ids_end</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1838935670%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="handle_reply_short_channel_ids_end.html"><span class="token function">handle_reply_short_channel_ids_end</span></a><span class="token punctuation">(</span>their_node_id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>msg<span class="token operator">: </span><a href="../../-reply-short-channel-ids-end/index.html">ReplyShortChannelIdsEnd</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../-result_-none-lightning-error-z/index.html">Result_NoneLightningErrorZ</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Handles the reply of a query we initiated asking for routing gossip messages for a list of channels.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-104030564%2FFunctions%2F1946847589" anchor-label="sync_routing_table" id="-104030564%2FFunctions%2F1946847589" data-filterable-set=":lib:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":lib:dokkaHtml/release" data-filterable-set=":lib:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="sync_routing_table.html"><span><span>sync_routing_table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-104030564%2FFunctions%2F1946847589"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="sync_routing_table.html"><span class="token function">sync_routing_table</span></a><span class="token punctuation">(</span>their_node_id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>init<span class="token operator">: </span><a href="../../-init/index.html">Init</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">Called when a connection is established with a peer.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

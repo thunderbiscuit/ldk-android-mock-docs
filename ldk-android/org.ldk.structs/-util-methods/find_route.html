@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>find_route</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script><script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html">ldk-android</a></div>
+      <div></div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageIds="ldk-android::org.ldk.structs/UtilMethods/find_route/#byte[]#org.ldk.structs.RouteParameters#org.ldk.structs.NetworkGraph#org.ldk.structs.ChannelDetails[]#org.ldk.structs.Logger#org.ldk.structs.Score/PointingToDeclaration//1946847589">
+          <div class="breadcrumbs"><a href="../../../index.html">ldk-android</a>/<a href="../index.html">org.ldk.structs</a>/<a href="index.html">UtilMethods</a>/<a href="find_route.html">find_route</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span><span>find_route</span></span></h1>
+          </div>
+          <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="find_route.html"><span class="token function">find_route</span></a><span class="token punctuation">(</span>our_node_pubkey<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>route_params<span class="token operator">: </span><a href="../-route-parameters/index.html">RouteParameters</a><span class="token punctuation">, </span>network<span class="token operator">: </span><a href="../-network-graph/index.html">NetworkGraph</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html"><span class="token annotation">Nullable</span></a> </span>first_hops<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../-channel-details/index.html">ChannelDetails</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>logger<span class="token operator">: </span><a href="../-logger/index.html">Logger</a><span class="token punctuation">, </span>scorer<span class="token operator">: </span><a href="../-score/index.html">Score</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-result_-route-lightning-error-z/index.html">Result_RouteLightningErrorZ</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Finds a route from us (payer) to the given target node (payee). If the payee provided features in their invoice, they should be provided via `params.payee`. Without this, MPP will only be used if the payee's features are available in the network graph. Private routing paths between a public node and the target may be included in `params.payee`. If some channels aren't announced, it may be useful to fill in `first_hops` with the results from [`ChannelManager::list_usable_channels`]. If it is filled in, the view of our local channels from [`NetworkGraph`] will be ignored, and only those in `first_hops` will be used. The fees on channels from us to the next hop are ignored as they are assumed to all be equal. However, the enabled/disabled bit on such channels as well as the `htlc_minimum_msat` / `htlc_maximum_msat` *are* checked as they may change based on the receiving node. # Note May be used to re-compute a [`Route`] when handling a [`Event::PaymentPathFailed`]. Any adjustments to the [`NetworkGraph`] and channel scores should be made prior to calling this function. # Panics Panics if first_hops contains channels without short_channel_ids; [`ChannelManager::list_usable_channels`] will never include such channels. [`ChannelManager::list_usable_channels`]: crate::ln::channelmanager::ChannelManager::list_usable_channels [`Event::PaymentPathFailed`]: crate::util::events::Event::PaymentPathFailed Note that first_hops (or a relevant inner pointer) may be NULL or all-0s to represent None</p></div></div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+
